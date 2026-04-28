@@ -1,0 +1,16 @@
+# Exported from Render on 2026-04-28T01:15:31Z
+version: "1"
+projects:
+- name: 突合システム(モック)
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: totsusystem
+      runtime: node
+      repo: https://github.com/r-funazaki/totsusystem
+      plan: free
+      region: singapore
+      buildCommand: npm install
+      startCommand: npm start
+      autoDeployTrigger: commit
